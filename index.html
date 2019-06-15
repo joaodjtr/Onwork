@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Onwork</title>
+
+    <base href="index.html" />
+
+    <meta
+      name="viewport"
+      content="viewport-fit-=cover, width=device-width, initial-scale=1.0"
+    />
+
+    <link rel="icon" type="image/png" href="assets/imgs/LogoReduzida.png" />
+
+    <link rel="stylesheet" href="styles/css/styleIndex.css" />
+    <script src="scripts/script.js"></script>
+  </head>
+
+  <body>
+    <main id="landing">
+      <div class="section-content">
+        <article id="landing-content">
+          <img class="landing-logo" src="assets/imgs/Logo.png" />
+          <p id="landing-slogan">
+            Ligando antigos problemas a novas soluções.
+          </p>
+        </article>
+
+        <nav id="landing-menu">
+          <ul>
+            <li class="item-menu">
+              <p class="number-item-menu">01</p>
+              <hr class="line-item-menu" />
+              <a onclick="showSection(this.title,0)" title="who-we-are" class="link-item-menu">Quem somos</a>
+            </li>
+            <li class="item-menu">
+              <p class="number-item-menu">02</p>
+              <hr class="line-item-menu" />
+              <a onclick="showSection(this.title,1)" title="team" class="link-item-menu">Equipe</a>
+            </li>
+            <li class="item-menu">
+              <p class="number-item-menu">03</p>
+              <hr class="line-item-menu" />
+              <a onclick="showSection(this.title,2)" title="projects" class="link-item-menu">Projetos</a>
+            </li>
+            <li class="item-menu">
+              <p class="number-item-menu">04</p>
+              <hr class="line-item-menu" />
+              <a onclick="showSection(this.title,3)" title="contact" class="link-item-menu">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+    <div class="overlay-effect">
+      <section id="who-we-are">
+        <h1 onclick="hideSection(this.title,0)" title="who-we-are">Clique em mim</h1>
+      </section>
+    </div>
+  </body>
+</html>

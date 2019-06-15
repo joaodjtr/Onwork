@@ -1,0 +1,203 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("../../assets/fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../../assets/fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Merriweather Sans;
+  src: url("../../assets/fonts/MerriweatherSans-regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Merriweather Sans;
+  src: url("../../assets/fonts/MerriweatherSans-bold.ttf");
+  font-weight: bold;
+}
+
+/* MAIN VARS */
+$primary-color: #1ab7ea;
+$secondary-color: #008fbd;
+$tertiary-color: #03eac6;
+
+$title-color: #0d1e23;
+$text-color: #000000;
+/* */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Merriweather Sans;
+
+  body {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: $title-color;
+}
+
+$transition-overlay-effect: .25s linear;
+$transition-section-effect: .35s linear;
+
+section {
+  z-index: 999;
+  top: 0;
+  left: 100%;
+  position: absolute;
+  transition: $transition-section-effect;
+  min-height: 100%;
+}
+
+.section-content {
+  margin: 50px 0 0 0;
+}
+
+.overlay-effect{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    position: absolute;
+    background: #1d434e;
+    transition: $transition-overlay-effect;
+}
+
+main#landing {
+  height: 100%;
+  width: 100%;
+  padding: 70px;
+  box-sizing: border-box;
+  background: url("../../assets/imgs/background-home.svg") no-repeat;
+  background-size: cover;
+
+  .section-content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+
+    #landing-content {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-end;
+
+      img.landing-logo {
+        width: 350px;
+        align-self: start;
+        margin: 0 0 auto 0;
+      }
+
+      #landing-slogan {
+        height: 300px;
+        max-width: 600px;
+        margin: 30px 0 auto 0;
+        align-self: start;
+        font-size: 3rem;
+        color: $title-color;
+      }
+    }
+
+    nav#landing-menu {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        display: flex;
+        flex-flow: column wrap;
+        list-style: none;
+
+        li.item-menu {
+          margin: 50px 0 0 0;
+          position: relative;
+          $color-before-menu: rgba(0, 0, 0, 0.3);
+          $transition-before-menu: 0.25s ease-out;
+          $item-menu-before-length: 60px;
+
+          p.number-item-menu {
+            display: inline-block;
+            font-size: 1.25em;
+            margin: 0 0 0 0;
+            color: $color-before-menu;
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: $transition-before-menu;
+          }
+
+          hr.line-item-menu {
+            display: inline-block;
+            margin: 0 0 0 0;
+            height: 5px;
+            width: $item-menu-before-length;
+            position: absolute;
+            top: 12.5px;
+            left: 30px;
+            background: $color-before-menu;
+            border: none;
+          }
+
+          a.link-item-menu {
+            display: block;
+            font-size: 2.35em;
+            margin: 8px 0 0 25px;
+            color: $title-color;
+            cursor: pointer;
+            text-transform: lowercase;
+            text-decoration: none;
+
+            &:before {
+              content: "";
+              position: absolute;
+              background: $primary-color;
+              height: 5px;
+              width: 0;
+              top: 12.5px;
+              left: 30px;
+              transition: $transition-before-menu;
+            }
+          }
+
+          &:hover a.link-item-menu:before,
+          &:hover p.number-item-menu {
+            width: $item-menu-before-length;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+section#who-We-Are {
+  height: 100%;
+  width: 100%;
+  background: white;
+}
