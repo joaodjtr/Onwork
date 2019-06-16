@@ -29,6 +29,7 @@ body {
   font-size: 16px;
   font-family: Merriweather Sans;
 }
+
 h1,
 h2,
 h3,
@@ -36,7 +37,7 @@ h4,
 h6 {
   font-family: Montserrat;
   font-weight: bold;
-  color: #0d1e23;
+  color: #103f4e;
 }
 
 .leave-section {
@@ -70,6 +71,12 @@ section .section-title {
   font-size: 3rem;
   text-align: center;
   margin: 50px 0 50px 0;
+}
+section .section-subtitle {
+  font-size: 2rem;
+  text-align: center;
+  margin: -20px 0 50px 0;
+  color: #4d6c75;
 }
 section .section-content {
   margin: 0 0 0 0;
@@ -114,14 +121,14 @@ main#landing .section-content #landing-content h3#we-are {
   margin: 0 0 10px 0;
   align-self: start;
   font-size: 2rem;
-  color: #0d1e23;
+  color: #103f4e;
   font-weight: normal;
 }
 main#landing .section-content #landing-content h1#landing-slogan {
   max-width: 600px;
   margin: 10px 0 auto 0;
   font-size: 3rem;
-  color: #0d1e23;
+  color: #103f4e;
 }
 main#landing .section-content #landing-content h1#landing-slogan b {
   color: #008fbd;
@@ -169,7 +176,7 @@ main#landing .section-content nav#landing-menu ul li.item-menu a.link-item-menu 
   display: block;
   font-size: 2.35rem;
   margin: 8px 0 0 25px;
-  color: #0d1e23;
+  color: #103f4e;
   cursor: pointer;
   text-transform: lowercase;
   text-decoration: none;
@@ -189,19 +196,28 @@ main#landing .section-content nav#landing-menu ul li.item-menu:hover a.link-item
   color: #1ab7ea;
 }
 
-section#who-We-Are {
-  height: 100%;
-  width: 100%;
-  border: 1px solid red;
+div.background {
   background: url("../../assets/imgs/bg-WhoWeAre.svg") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+}
+
+section#who-We-Are {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#who-We-Are .section-title {
+  font-size: 3rem;
 }
 section#who-We-Are .section-content {
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  width: 70%;
 }
 section#who-We-Are .section-content p {
   max-width: 600px;
@@ -216,14 +232,102 @@ section#who-We-Are .section-content ul {
   list-style: none;
 }
 section#who-We-Are .section-content ul li.item-icon {
-  padding: 15px;
-  border-radius: 15px;
+  padding: 30px;
+  border-radius: 25px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   background: white;
   margin: 0 30px 0 0;
 }
 section#who-We-Are .section-content ul li.item-icon img {
-  height: 100px;
+  height: 75px;
+}
+
+#team {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding: 0 0 0 0;
+}
+#team #group-titles {
+  max-width: 600px;
+  margin: 0 0 100px 0;
+}
+#team #group-titles .section-title,
+#team #group-titles .section-subtitle {
+  margin: 0 0 20px 0;
+}
+#team .section-content {
+  min-height: 70%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 0 100px;
+  align-content: center;
+}
+#team .section-content .card-person {
+  height: auto;
+  width: auto;
+  margin: 15px 25px 0 0;
+}
+#team .section-content .card-person .avatar-person {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+#team .section-content .card-person .name-person,
+#team .section-content .card-person .function-person {
+  width: 200px;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+#team .section-content .card-person .name-person {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+#team .section-content .card-person .function-person {
+  font-size: 0.9rem;
+  margin: 2.5px 0 0 0;
+  font-weight: normal;
+  font-family: Merriweather Sans;
+}
+#team .section-content .card-person:nth-child(1) .avatar-person {
+  background: url("../../assets/imgs/alex.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#team .section-content .card-person:nth-child(2) .avatar-person {
+  background: url("../../assets/imgs/FelipePavanelli.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#team .section-content .card-person:nth-child(3) .avatar-person {
+  background: url("../../assets/imgs/GuilhermeGomes.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#team .section-content .card-person:nth-child(4) .avatar-person {
+  background: url("../../assets/imgs/GustavoCunha.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+#team .section-content .card-person:nth-child(5) .avatar-person {
+  background: url("../../assets/imgs/GustavoVieira.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#team .section-content .card-person:nth-child(6) .avatar-person {
+  background: url("../../assets/imgs/JoaoVictor.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#team .section-content .card-person:nth-child(7) .avatar-person {
+  background: white;
 }
 
 /*# sourceMappingURL=styleIndex.css.map */

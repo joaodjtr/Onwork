@@ -27,7 +27,8 @@ $primary-color: #1ab7ea;
 $secondary-color: #008fbd;
 $tertiary-color: #03eac6;
 
-$title-color: #0d1e23;
+$title-color: rgb(16, 63, 78);
+$subtitle-color: rgb(77, 108, 117);
 $text-color: #000000;
 /* */
 
@@ -39,10 +40,6 @@ body {
   padding: 0;
   font-size: 16px;
   font-family: Merriweather Sans;
-
-  body {
-
-  }
 }
 
 h1,
@@ -92,6 +89,13 @@ section {
     font-size: 3rem;
     text-align: center;
     margin: 50px 0 50px 0;
+  }
+
+  .section-subtitle {
+    font-size: 2rem;
+    text-align: center;
+    margin: -20px 0 50px 0;
+    color: $subtitle-color;
   }
 
   .section-content {
@@ -233,23 +237,29 @@ main#landing {
   }
 }
 
-section#who-We-Are {
-  height: 100%;
-  width: 100%;
-  border: 1px solid red;
+div.background {
   background: url("../../assets/imgs/bg-WhoWeAre.svg") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  
-  .section-title{
-    // margin: auto 0 50px 0;
+}
+
+section#who-We-Are {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section-title {
+    font-size: 3rem;
   }
 
   .section-content {
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    width: 70%;
 
     p {
       max-width: 600px;
@@ -265,16 +275,115 @@ section#who-We-Are {
       list-style: none;
 
       li.item-icon {
-        padding: 15px;
-        border-radius: 15px;
+        padding: 30px;
+        border-radius: 25px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         background: white;
         margin: 0 30px 0 0;
 
         img {
-          height: 100px;
+          height: 75px;
         }
       }
     }
+  }
+}
+
+#team {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  // border: 1px solid red;
+  padding: 0 0 0 0;
+
+  #group-titles {
+    max-width: 600px;
+    margin: 0 0 100px 0;
+    .section-title,
+    .section-subtitle {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .section-content {
+    min-height: 70%;
+    width: 50%;
+    display: flex;
+    // align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 0 0 100px;
+    align-content: center;
+
+    .card-person {
+      height: auto;
+      width: auto;
+      margin: 15px 25px 0 0;
+
+      .avatar-person {
+        height: 200px;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .name-person,
+      .function-person {
+        width: 200px;
+        margin: 10px 0 0 0;
+        text-align: center;
+      }
+
+      .name-person{
+        font-size: 1.3rem;
+        letter-spacing: .5px;
+      }
+
+      .function-person{
+        font-size: .9rem;
+        margin: 2.5px 0 0 0;
+        font-weight: normal;
+        font-family: Merriweather Sans;
+      }
+    }
+
+    .card-person:nth-child(1) .avatar-person{
+      background: url("../../assets/imgs/alex.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .card-person:nth-child(2) .avatar-person{
+      background: url("../../assets/imgs/FelipePavanelli.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .card-person:nth-child(3) .avatar-person{
+      background: url("../../assets/imgs/GuilhermeGomes.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .card-person:nth-child(4) .avatar-person{
+      background: url("../../assets/imgs/GustavoCunha.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+    .card-person:nth-child(5) .avatar-person{
+      background: url("../../assets/imgs/GustavoVieira.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .card-person:nth-child(6) .avatar-person{
+      background: url("../../assets/imgs/JoaoVictor.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .card-person:nth-child(7) .avatar-person{
+      background: white;
+    }
+
   }
 }
