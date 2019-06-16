@@ -4,7 +4,7 @@ function showSection(s, n) {
   overlay.style.left = 0;
   overlay.style.transition = ".25s linear";
   section.style.left = 0;
-  section.style.transition = ".35s linear";
+  section.style.transition = ".28s linear";
 }
 
 function hideSection(s, n) {
@@ -13,5 +13,5 @@ function hideSection(s, n) {
   section.style.left = "100%";
   section.style.transition = ".25s linear";
   overlay.style.left = "100%";
-  overlay.style.transition = ".35s linear";
+  overlay.style.transition = ".28s linear";
 }

@@ -6,7 +6,7 @@
 @font-face {
   font-family: Montserrat;
   src: url("../../assets/fonts/Montserrat-Bold.ttf");
-  font-weight: bold;
+  font-weight: 700;
 }
 @font-face {
   font-family: Merriweather Sans;
@@ -29,14 +29,6 @@ body {
   font-size: 16px;
   font-family: Merriweather Sans;
 }
-html body,
-body body {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 h1,
 h2,
 h3,
@@ -47,70 +39,98 @@ h6 {
   color: #0d1e23;
 }
 
-section {
-  z-index: 999;
-  top: 0;
-  left: 100%;
-  position: absolute;
-  transition: 0.35s linear;
-  min-height: 100%;
-}
-
-.section-content {
-  margin: 50px 0 0 0;
-}
-
-.overlay-effect {
-  height: 100%;
+.leave-section {
   width: 100%;
-  top: 0;
-  left: 100%;
-  position: absolute;
-  background: #1d434e;
-  transition: 0.25s linear;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.leave-section img.button-leave-section {
+  height: 50px;
+  width: 50x;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.leave-section img.button-leave-section:hover {
+  margin: 0 0 0 12.5px;
+}
+.leave-section p {
+  margin: 5px 0 0 0;
+  text-decoration: underline;
+  font-size: 1em;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+section {
+  padding: 0 0 50px 0;
+}
+section .section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+section .section-content {
+  margin: 0 0 0 0;
 }
 
 main#landing {
-  height: 100%;
+  height: auto;
   width: 100%;
-  padding: 70px;
   box-sizing: border-box;
-  background: url("../../assets/imgs/background-home.svg") no-repeat;
+  background: url("../../assets/imgs/bg-home.svg") no-repeat;
   background-size: cover;
+  position: relative;
 }
 main#landing .section-content {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   margin: 0;
   display: flex;
-}
-main#landing .section-content #landing-content {
-  height: 100%;
-  width: 50%;
-  display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 70px;
+  box-sizing: border-box;
 }
-main#landing .section-content #landing-content img.landing-logo {
-  width: 350px;
-  align-self: start;
-  margin: 0 0 auto 0;
-}
-main#landing .section-content #landing-content #landing-slogan {
-  height: 300px;
-  max-width: 600px;
-  margin: 30px 0 auto 0;
-  align-self: start;
-  font-size: 3rem;
-  color: #0d1e23;
-}
-main#landing .section-content nav#landing-menu {
-  height: 100%;
-  width: 50%;
+main#landing .section-content #landing-logo {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+main#landing .section-content #landing-logo img {
+  width: 350px;
+}
+main#landing .section-content #landing-content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main#landing .section-content #landing-content h3#we-are {
+  width: 100%;
+  margin: 0 0 10px 0;
+  align-self: start;
+  font-size: 2rem;
+  color: #0d1e23;
+  font-weight: normal;
+}
+main#landing .section-content #landing-content h1#landing-slogan {
+  max-width: 600px;
+  margin: 10px 0 auto 0;
+  font-size: 3rem;
+  color: #0d1e23;
+}
+main#landing .section-content #landing-content h1#landing-slogan b {
+  color: #008fbd;
+}
+main#landing .section-content nav#landing-menu {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 main#landing .section-content nav#landing-menu ul {
   display: flex;
@@ -120,6 +140,9 @@ main#landing .section-content nav#landing-menu ul {
 main#landing .section-content nav#landing-menu ul li.item-menu {
   margin: 50px 0 0 0;
   position: relative;
+}
+main#landing .section-content nav#landing-menu ul li.item-menu:first-child {
+  margin: 0 0 0 0;
 }
 main#landing .section-content nav#landing-menu ul li.item-menu p.number-item-menu {
   display: inline-block;
@@ -144,7 +167,7 @@ main#landing .section-content nav#landing-menu ul li.item-menu hr.line-item-menu
 }
 main#landing .section-content nav#landing-menu ul li.item-menu a.link-item-menu {
   display: block;
-  font-size: 2.35em;
+  font-size: 2.35rem;
   margin: 8px 0 0 25px;
   color: #0d1e23;
   cursor: pointer;
@@ -169,7 +192,38 @@ main#landing .section-content nav#landing-menu ul li.item-menu:hover a.link-item
 section#who-We-Are {
   height: 100%;
   width: 100%;
+  border: 1px solid red;
+  background: url("../../assets/imgs/bg-WhoWeAre.svg") no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+section#who-We-Are .section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section#who-We-Are .section-content p {
+  max-width: 600px;
+  font-size: 1.5rem;
+}
+section#who-We-Are .section-content ul {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+section#who-We-Are .section-content ul li.item-icon {
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   background: white;
+  margin: 0 30px 0 0;
+}
+section#who-We-Are .section-content ul li.item-icon img {
+  height: 100px;
 }
 
 /*# sourceMappingURL=styleIndex.css.map */

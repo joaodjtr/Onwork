@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="768" viewBox="0 0 1366 768">
+  <defs>
+    <filter id="Retângulo_6" x="345.533" y="47.144" width="656.288" height="656.288" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feFlood flood-opacity="0.157"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_1" x="835" y="-0.212" width="223" height="223" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_5" x="247" y="565" width="196" height="196" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Caminho_1" x="922.772" y="491.272" width="195.251" height="195.25" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-bg-WhoWeAre">
+      <rect width="1366" height="768"/>
+    </clipPath>
+  </defs>
+  <g id="bg-WhoWeAre" clip-path="url(#clip-bg-WhoWeAre)">
+    <rect width="1366" height="768" fill="#fff"/>
+    <g id="Grupo_9" data-name="Grupo 9" transform="translate(-186 34.288)" opacity="0.34">
+      <g transform="matrix(1, 0, 0, 1, 186, -34.29)" filter="url(#Retângulo_6)">
+        <rect id="Retângulo_6-2" data-name="Retângulo 6" width="358" height="358" rx="50" transform="translate(420.53 372.29) rotate(-45)" fill="rgba(3,234,198,0.59)"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 186, -34.29)" filter="url(#Elipse_1)">
+        <circle id="Elipse_1-2" data-name="Elipse 1" cx="74" cy="74" r="74" transform="translate(872.5 34.29)" fill="rgba(26,183,234,0.53)"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 186, -34.29)" filter="url(#Elipse_5)">
+        <circle id="Elipse_5-2" data-name="Elipse 5" cx="74" cy="74" r="74" transform="translate(271 586)" fill="rgba(234,26,123,0.5)"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 186, -34.29)" filter="url(#Caminho_1)">
+        <path id="Caminho_1-2" data-name="Caminho 1" d="M0,107.795,53.971,0l53.823,107.795Z" transform="translate(1000.67 512.27) rotate(30)" fill="#f5c39d"/>
+      </g>
+      <rect id="Retângulo_7" data-name="Retângulo 7" width="120" height="120" rx="2" transform="translate(480.396 95.478) rotate(-18)" fill="rgba(0,143,189,0.51)"/>
+    </g>
+  </g>
+</svg>

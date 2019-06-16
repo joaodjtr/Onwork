@@ -7,10 +7,10 @@
 
     <meta
       name="viewport"
-      content="viewport-fit-=cover, width=device-width, initial-scale=1.0"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0"
     />
 
-    <link rel="icon" type="image/png" href="assets/imgs/LogoReduzida.png" />
+    <link rel="icon" type="image/png" href="assets/imgs/onwork-mini.png" />
 
     <link rel="stylesheet" href="styles/css/styleIndex.css" />
     <script src="scripts/script.js"></script>
@@ -19,43 +19,76 @@
   <body>
     <main id="landing">
       <div class="section-content">
+        <div id="landing-logo">
+          <img src="assets/imgs/onwork.png" />
+        </div>
         <article id="landing-content">
-          <img class="landing-logo" src="assets/imgs/Logo.png" />
-          <p id="landing-slogan">
-            Ligando antigos problemas a novas soluções.
-          </p>
+          <h3 id="we-are">Nós somos a Onwork:</h3>
+          <h1 id="landing-slogan">
+            Ligando antigos problemas a novas <b>soluções.</b>
+          </h1>
         </article>
-
         <nav id="landing-menu">
           <ul>
             <li class="item-menu">
               <p class="number-item-menu">01</p>
               <hr class="line-item-menu" />
-              <a onclick="showSection(this.title,0)" title="who-we-are" class="link-item-menu">Quem somos</a>
+              <a
+                onclick="showSection(this.title,0)"
+                title="who-we-are"
+                class="link-item-menu"
+                >Quem somos</a
+              >
             </li>
             <li class="item-menu">
               <p class="number-item-menu">02</p>
               <hr class="line-item-menu" />
-              <a onclick="showSection(this.title,1)" title="team" class="link-item-menu">Equipe</a>
+              <a
+                onclick="showSection(this.title,1)"
+                title="team"
+                class="link-item-menu"
+                >Equipe</a
+              >
             </li>
             <li class="item-menu">
               <p class="number-item-menu">03</p>
               <hr class="line-item-menu" />
-              <a onclick="showSection(this.title,2)" title="projects" class="link-item-menu">Projetos</a>
+              <a
+                onclick="showSection(this.title,2)"
+                title="projects"
+                class="link-item-menu"
+                >Projetos</a
+              >
             </li>
             <li class="item-menu">
               <p class="number-item-menu">04</p>
               <hr class="line-item-menu" />
-              <a onclick="showSection(this.title,3)" title="contact" class="link-item-menu">Contato</a>
+              <a
+                onclick="showSection(this.title,3)"
+                title="contact"
+                class="link-item-menu"
+                >Contato</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </main>
-    <div class="overlay-effect">
-      <section id="who-we-are">
-        <h1 onclick="hideSection(this.title,0)" title="who-we-are">Clique em mim</h1>
-      </section>
-    </div>
+
+    <section id="who-we-are">
+      <h1 class="section-title">Quem somos</h1>
+      <div class="section-content">
+        <p>
+          A Onwork é uma empresa que se renova a cada dia. Por meio das
+          tecnologias mais relevantes do mercado, desenvolvemos soluções que
+          melhoram a qualidade de vida das pessoas.
+        </p>
+        <ul>
+            <li class="item-icon"><img src="assets/imgs/update-arrows.png"/></li>
+            <li class="item-icon"><img src="assets/imgs/light-bulb.png"/></li>
+            <li class="item-icon"><img src="assets/imgs/happiness.png"/></li>
+          </ul>
+      </div>
+    </section>
   </body>
 </html>
