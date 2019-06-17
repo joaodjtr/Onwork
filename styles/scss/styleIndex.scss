@@ -55,46 +55,20 @@ h6 {
 $transition-overlay-effect: 0.25s linear;
 $transition-section-effect: 0.35s linear;
 
-.leave-section {
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-
-  img.button-leave-section {
-    height: 50px;
-    width: 50x;
-    transition: 0.15s;
-    cursor: pointer;
-
-    &:hover {
-      margin: 0 0 0 12.5px;
-    }
-  }
-
-  p {
-    margin: 5px 0 0 0;
-    text-decoration: underline;
-    font-size: 1em;
-    text-transform: lowercase;
-    cursor: pointer;
-  }
-}
-
 section {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
+  box-sizing: border-box;
 
   .section-title {
     font-size: 3rem;
     text-align: center;
-    margin: 50px 0 50px 0;
+    margin: 0 0 30px 0;
   }
 
   .section-subtitle {
-    font-size: 2rem;
+    font-size: 1.9rem;
     text-align: center;
-    margin: -20px 0 50px 0;
+    margin: -30px 0 30px 0;
     color: $subtitle-color;
   }
 
@@ -237,7 +211,7 @@ main#landing {
   }
 }
 
-div.background {
+div.bg-who-we-are {
   background: url("../../assets/imgs/bg-WhoWeAre.svg") no-repeat;
   background-size: cover;
   background-position: center;
@@ -264,6 +238,7 @@ section#who-We-Are {
     p {
       max-width: 600px;
       font-size: 1.5rem;
+      margin: 0 0 30px 0;
     }
 
     ul {
@@ -298,7 +273,6 @@ section#who-We-Are {
   box-sizing: border-box;
   flex-wrap: wrap;
   // border: 1px solid red;
-  padding: 0 0 0 0;
 
   #group-titles {
     max-width: 600px;
@@ -338,52 +312,142 @@ section#who-We-Are {
         text-align: center;
       }
 
-      .name-person{
+      .name-person {
         font-size: 1.3rem;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
       }
 
-      .function-person{
-        font-size: .9rem;
+      .function-person {
+        font-size: 0.9rem;
         margin: 2.5px 0 0 0;
         font-weight: normal;
         font-family: Merriweather Sans;
       }
     }
 
-    .card-person:nth-child(1) .avatar-person{
+    .card-person:nth-child(1) .avatar-person {
       background: url("../../assets/imgs/alex.jpg");
       background-size: cover;
       background-position: center;
     }
-    .card-person:nth-child(2) .avatar-person{
+    .card-person:nth-child(2) .avatar-person {
       background: url("../../assets/imgs/FelipePavanelli.jpg");
       background-size: cover;
       background-position: center;
     }
-    .card-person:nth-child(3) .avatar-person{
+    .card-person:nth-child(3) .avatar-person {
       background: url("../../assets/imgs/GuilhermeGomes.jpg");
       background-size: cover;
       background-position: center;
     }
-    .card-person:nth-child(4) .avatar-person{
+    .card-person:nth-child(4) .avatar-person {
       background: url("../../assets/imgs/GustavoCunha.jpeg");
       background-size: cover;
       background-position: center;
     }
-    .card-person:nth-child(5) .avatar-person{
+    .card-person:nth-child(5) .avatar-person {
       background: url("../../assets/imgs/GustavoVieira.jpg");
       background-size: cover;
       background-position: center;
     }
-    .card-person:nth-child(6) .avatar-person{
+    .card-person:nth-child(6) .avatar-person {
       background: url("../../assets/imgs/JoaoVictor.jpg");
       background-size: cover;
       background-position: center;
     }
-    .card-person:nth-child(7) .avatar-person{
+    .card-person:nth-child(7) .avatar-person {
       background: white;
     }
+  }
+}
 
+#works {
+  height: auto;
+  width: 100%;
+  background: url("../../assets/imgs/bg-works.svg") no-repeat;
+  background-size: cover;
+
+  .section-content {
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .card-work {
+      height: 250px;
+      width: 250px;
+      margin: 30px 50px 30px 0;
+      background: white;
+      border-radius: 15px;
+      padding: 0 30px;
+      box-shadow: 0 5px 6px rgba(0, 0, 0, 0.15);
+
+      .title-work {
+        font-size: 1.7rem;
+        text-align: center;
+        color: rgb(77, 77, 77);
+        position: relative;
+        z-index: 1;
+      }
+
+      .title-work:before {
+        content: "";
+        height: 10px;
+        width: 100px;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 2.5px;
+        left: 0;
+        margin: 0px auto;
+        z-index: -1;
+        background: linear-gradient(
+          to right,
+          rgba(26, 183, 234, 0.3),
+          rgba(3, 234, 198, 0.5)
+        );
+        transform: skewX(25deg);
+      }
+
+      .content-work {
+        font-size: 1.25em;
+        text-align: left;
+        color: rgb(136, 136, 136);
+        margin: 0;
+      }
+    }
+
+    .card-work:nth-child(2) .title-work:before {
+      background: linear-gradient(
+        to right,
+        rgba(26, 183, 234, 0.23),
+        rgba(26, 183, 234, 0.93)
+      );
+    }
+
+    .card-work:nth-child(3) .title-work:before {
+      background: linear-gradient(
+        to right,
+        rgba(255, 187, 0, 0.44),
+        rgba(255, 0, 0, 0.39)
+      );
+    }
+  }
+}
+
+#contact{
+  background: rgba(26, 183, 234,0.1);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  box-shadow: -3px 0 25px rgba(0, 0, 0, 0.1);
+  
+  .section-content{
+    padding: 30px;
+    width: 70%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
 }
