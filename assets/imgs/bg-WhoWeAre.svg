@@ -27,7 +27,7 @@
   </defs>
   <g id="bg-WhoWeAre" clip-path="url(#clip-bg-WhoWeAre)">
     <rect width="1366" height="768" fill="#fff"/>
-    <rect id="Retângulo_8" data-name="Retângulo 8" width="1531" height="1175" rx="100" transform="translate(-126.344 -1150.079) rotate(16)" fill="url(#linear-gradient)"/>
+    <rect id="Retângulo_8" data-name="Retângulo 8" width="1531" height="450" rx="100" transform="translate(-326.181 -453.164) rotate(16)" fill="url(#linear-gradient)"/>
     <g id="Repetição_de_grade_1" data-name="Repetição de grade 1" transform="translate(1003 21)" opacity="0.51" clip-path="url(#clip-path)">
       <g transform="translate(-101 204)">
         <circle id="Elipse_4" data-name="Elipse 4" cx="5" cy="5" r="5" transform="translate(101 -204)" fill="rgba(29,62,106,0.46)"/>

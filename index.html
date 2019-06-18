@@ -16,7 +16,16 @@
     <script src="scripts/script.js"></script>
   </head>
 
-  <body>
+  <body onload="init()">
+    <header id="fixed-header">
+      <a href="#landing"><img id="logo-header" src="assets/imgs/onwork.png"/></a>
+      <nav id="header-menu">
+          <a href="#who-we-are" class="link-menu">Quem somos</a>
+          <a href="#team" class="link-menu">Equipe</a>
+          <a href="#works" class="link-menu">Trabalhos</a>
+          <a href="#contact" class="link-menu">Contato</a>
+        </nav>
+    </header>
     <main id="landing">
       <div class="section-content">
         <div id="landing-logo">
@@ -28,7 +37,8 @@
             Ligando antigos problemas a novas <b>soluções.</b>
           </h1>
         </article>
-        <nav id="landing-menu">
+      <img id="landing-heroImg" src="assets/imgs/fogg-success-1.png"/>
+        <!-- <nav id="landing-menu">
           <ul>
             <li class="item-menu">
               <p class="number-item-menu">01</p>
@@ -75,10 +85,10 @@
               >
             </li>
           </ul>
-        </nav>
+        </nav> -->
       </div>
     </main>
-    <div class="bg-who-we-are">
+    <div id="bg-who-we-are">
       <section id="who-we-are">
         <h1 class="section-title">Quem somos</h1>
         <div class="section-content">
@@ -147,37 +157,66 @@
         </div>
       </section>
     </div>
-    <section id="works">
-      <h1 class="section-title">Trabalhos</h1>
-      <h3 class="section-subtitle">Algumas coisas que fizemos</h3>
+    <div id="bg-works">
+      <section id="works">
+        <h1 class="section-title">Trabalhos</h1>
+        <h3 class="section-subtitle">Algumas coisas que fizemos</h3>
 
-      <div class="section-content">
-        <div class="card-work">
-          <h1 class="title-work">Contribua!</h1>
-          <p class="content-work">
-            Conecte ONGs e voluntários para ajudar quem precisa, pelo computador
-            ou na palma da sua mão.
-          </p>
+        <div class="section-content">
+          <div class="card-work">
+            <h1 class="title-work">Contribua!</h1>
+            <p class="content-work">
+              Conecte ONGs e voluntários para ajudar quem precisa, pelo
+              computador ou na palma da sua mão.
+            </p>
+          </div>
+          <div class="card-work">
+            <h1 class="title-work">Newpost</h1>
+            <p class="content-work">
+              Uma rede social feita para quem gosta de ler sobre seus gostos e
+              conhecer novos tópicos.
+            </p>
+          </div>
+          <div class="card-work">
+            <h1 class="title-work">Lirify</h1>
+            <p class="content-work">
+              Compartilhe e amplie seus gostos musicais por meio dessa
+              plataforma.
+            </p>
+          </div>
         </div>
-        <div class="card-work">
-          <h1 class="title-work">Newpost</h1>
-          <p class="content-work">
-            Uma rede social feita para quem gosta de ler sobre seus gostos e
-            conhecer novos tópicos.
-          </p>
+      </section>
+      <section id="contact">
+        <div class="section-content">
+          <div class="something-in-mind">
+            <h3 class="section-title">Algo em mente?</h3>
+            <input required name="name" placeholder="Nome">
+            <input required name="email" type="email" placeholder="Email">
+            <input required name="project" placeholder="Detalhes do projeto">
+            <button type="submit">Enviar</button>
+          </div>
+          <div class="contact-data">
+            <h1 class="section-title">Contato</h1>
+            <ul>
+              <li>Dados</li>
+              <li>email@onwork.com</li>
+              <li>(99) 9999-9999</li>
+            </ul>
+            <ul>
+              <li>Siga-nos aqui</li>
+              <li><img src="assets/imgs/facebook.png"/></li>
+              <li><img src="assets/imgs/instagram.png"/></li>
+              <li><img src="assets/imgs/twitter.png"/></li>
+              <li><img src="assets/imgs/dribbble.png"/></li>
+            </ul>
+          </div>
         </div>
-        <div class="card-work">
-          <h1 class="title-work">Lirify</h1>
-          <p class="content-work">
-            Compartilhe e amplie seus gostos musicais por meio dessa plataforma.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <h1 class="section-title">Contato</h1>
-      <h3 class="section-subtitle">Vamos construir algo juntos...</h3>
-      <div class="section-content"></div>
-    </section>
+      </section>
+    </div>
+    <footer>
+      <span>Icons made by Freepik from <a>www.flaticon.com</a></span>
+      <span>© 2019 Onwork</span>
+      <img class="logo-footer" src="assets/imgs/onwork-white.png"/>
+    </footer>
   </body>
 </html>
