@@ -1,222 +1,259 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Onwork</title>
-
+    <link rel="icon" type="image/png" href="assets/imgs/onwork-mini.png" />
+    <link rel="stylesheet" href="assets/styles/css/indexStyle.css" />
+    <Link rel="stylesheet" href="assets/styles/css/indexStyle.css.map" />
     <base href="index.html" />
-
     <meta
       name="viewport"
       content="viewport-fit=cover, width=device-width, initial-scale=1.0"
     />
-
-    <link rel="icon" type="image/png" href="assets/imgs/onwork-mini.png" />
-
-    <link rel="stylesheet" href="styles/css/styleIndex.css" />
-    <script src="scripts/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Onwork</title>
   </head>
 
   <body onload="init()">
-    <header id="fixed-header">
-      <a href="#landing"><img id="logo-header" src="assets/imgs/onwork.png"/></a>
-      <nav id="header-menu">
-          <a href="#who-we-are" class="link-menu">Quem somos</a>
-          <a href="#team" class="link-menu">Equipe</a>
-          <a href="#works" class="link-menu">Trabalhos</a>
-          <a href="#contact" class="link-menu">Contato</a>
-        </nav>
-    </header>
-    <main id="landing">
-      <div class="section-content">
-        <div id="landing-logo">
-          <img src="assets/imgs/onwork.png" />
-        </div>
-        <article id="landing-content">
-          <h3 id="we-are">Nós somos a Onwork:</h3>
-          <h1 id="landing-slogan">
-            Ligando antigos problemas a novas <b>soluções.</b>
-          </h1>
-        </article>
-      <img id="landing-heroImg" src="assets/imgs/fogg-success-1.png"/>
-        <!-- <nav id="landing-menu">
-          <ul>
-            <li class="item-menu">
-              <p class="number-item-menu">01</p>
-              <hr class="line-item-menu" />
-              <a
-                onclick="showSection(this.title,0)"
-                title="who-we-are"
-                href="#who-we-are"
-                class="link-item-menu"
-                >Quem somos</a
-              >
-            </li>
-            <li class="item-menu">
-              <p class="number-item-menu">02</p>
-              <hr class="line-item-menu" />
-              <a
-                onclick="showSection(this.title,1)"
-                title="team"
-                href="#team"
-                class="link-item-menu"
-                >Equipe</a
-              >
-            </li>
-            <li class="item-menu">
-              <p class="number-item-menu">03</p>
-              <hr class="line-item-menu" />
-              <a
-                onclick="showSection(this.title,2)"
-                title="works"
-                href="#works"
-                class="link-item-menu"
-                >Trabalhos</a
-              >
-            </li>
-            <li class="item-menu">
-              <p class="number-item-menu">04</p>
-              <hr class="line-item-menu" />
-              <a
-                onclick="showSection(this.title,3)"
-                title="contact"
-                href="#contact"
-                class="link-item-menu"
-                >Contato</a
-              >
-            </li>
-          </ul>
-        </nav> -->
+    <header id="header">
+      <a id="logo">
+        <img src="assets/imgs/logo.png" />
+      </a>
+      <div id="nav">
+        <ul>
+          <a href="#about-us">
+            <li class="link-header">Quem somos</li>
+          </a>
+          <a href="#works">
+            <li class="link-header">Trabalhos</li>
+          </a>
+          <a href="#team">
+            <li class="link-header">Equipe</li>
+          </a>
+          <a href="#contact">
+            <li class="link-header">Contato</li>
+          </a>
+        </ul>
       </div>
-    </main>
-    <div id="bg-who-we-are">
-      <section id="who-we-are">
-        <h1 class="section-title">Quem somos</h1>
-        <div class="section-content">
-          <p>
-            A Onwork é uma empresa que se renova a cada dia. Por meio das
-            tecnologias mais relevantes do mercado, desenvolvemos soluções que
-            melhoram a qualidade de vida das pessoas.
-          </p>
+    </header>
+    <nav id="landing-header">
+      <a id="logo">
+        <img src="assets/imgs/logo.png" />
+      </a>
+      <div id="nav">
+        <ul>
+          <a href="#about-us">
+            <li>Quem somos</li>
+          </a>
+          <a href="#works">
+            <li>Trabalhos</li>
+          </a>
+          <a href="#team">
+            <li>Equipe</li>
+          </a>
+          <a href="#contact">
+            <li>Contato</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="landing">
+      <div class="container">
+        <div id="landing-group">
+          <h1 id="main-text" class="section-title">
+            Nós criamos e desenvolvemos aplicações que você precisar.
+          </h1>
+          <a href="#about-us"><button id="about">Saiba mais</button></a>
+        </div>
+        <img src="assets/imgs/landingImage.png" id="landing-hero" />
+      </div>
+    </section>
+    <section class="section" id="about-us">
+      <div class="container">
+        <div class="block">
+          <div class="box-content">
+            <h1 class="section-title after">Sobre nós</h1>
+            <p class="text">
+              Nós da Onwork trabalhamos com o desenvolvimento de aplicações para
+              web, mobile e desktop. Criamos websites, softwares personalizados,
+              programas para comércio, etc. Por meio da tecnologia, ligamos
+              antigos problemas a novas soluções.
+            </p>
+          </div>
+          <img src="assets/imgs/aboutusImage.png" />
+        </div>
+        <div class="block">
+          <div class="box-content">
+            <h1 class="section-title after">Sempre aprendendo</h1>
+            <p class="text">
+              Nós sempre gostamos de projetos inusitados que nos
+              <b>desafiam</b> e estamos sempre dispostos a aprender novas
+              tecnologias para desenvolver melhores produtos para nossos
+              clientes.
+            </p>
+          </div>
+        </div>
+        <div class="block">
           <ul>
-            <li class="item-icon">
-              <img src="assets/imgs/update-arrows.png" />
-            </li>
-            <li class="item-icon"><img src="assets/imgs/light-bulb.png" /></li>
-            <li class="item-icon"><img src="assets/imgs/happiness.png" /></li>
+            <li>+15<br />projetos</li>
+            <li>+10.000<br />linhas de código</li>
+            <li>+1.008<br />horas de trabalho</li>
           </ul>
         </div>
-      </section>
-
-      <section id="team">
-        <article id="group-titles">
-          <h1 class="section-title">Equipe</h1>
-          <h3 class="section-subtitle">Quem faz isso possível.</h3>
-        </article>
-        <div class="section-content">
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">Alex Christian</h3>
-            <h4 class="function-person">Ilustrador</h4>
-          </div>
-
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">Felipe Pavanelli</h3>
-            <h4 class="function-person">Analista</h4>
-          </div>
-
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">Guilherme G.</h3>
-            <h4 class="function-person">Analista</h4>
-          </div>
-
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">Gustavo Cunha</h3>
-            <h4 class="function-person">Desenvolvedor back-end</h4>
-          </div>
-
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">Gustavo Vieira</h3>
-            <h4 class="function-person">DBA</h4>
-          </div>
-
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">João Victor</h3>
-            <h4 class="function-person">Desenvolvedor front-end e designer</h4>
-          </div>
-
-          <div class="card-person">
-            <div class="avatar-person"></div>
-            <h3 class="name-person">Lucas Moreira</h3>
-            <h4 class="function-person">Analista</h4>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div id="bg-works">
-      <section id="works">
+      </div>
+    </section>
+    <section class="section" id="works">
+      <div class="container">
         <h1 class="section-title">Trabalhos</h1>
-        <h3 class="section-subtitle">Algumas coisas que fizemos</h3>
-
-        <div class="section-content">
-          <div class="card-work">
-            <h1 class="title-work">Contribua!</h1>
-            <p class="content-work">
-              Conecte ONGs e voluntários para ajudar quem precisa, pelo
-              computador ou na palma da sua mão.
+        <h1 class="section-subtitle">
+          Alguns projetos que já realizamos.
+        </h1>
+        <div id="projects">
+          <article class="project">
+            <div class="project-image"></div>
+            <h1 class="project-title">Contribua!</h1>
+            <p class="text">
+              Consequat irure ex nulla est cillum Lorem ullamco incididunt
+              ipsum.
             </p>
+          </article>
+          <article class="project">
+            <div class="project-image"></div>
+            <h1 class="project-title">Newpost</h1>
+            <p class="text">
+              Minim ullamco voluptate ullamco qui aliqua excepteur deserunt
+              aliquip velit commodo.
+            </p>
+          </article>
+          <article class="project">
+            <div class="project-image"></div>
+            <h1 class="project-title">Lirify</h1>
+            <p class="text">
+              Cillum ullamco commodo amet occaecat velit et reprehenderit.
+            </p>
+          </article>
+          <article class="project wide">
+            <div class="project-image"></div>
+            <h1 class="project-title">Tom's Adventures</h1>
+            <p class="text">
+              Ipsum pariatur id dolor deserunt cupidatat duis excepteur duis ut
+              dolor dolor quis velit tempor.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="team">
+      <div class="container">
+        <h1 class="section-title">Equipe</h1>
+        <h1 class="section-subtitle">
+          Veja quem são as mentes por trás de tudo isso.
+        </h1>
+        <div id="content">
+          <div class="person">
+            <img src="assets/imgs/Alex Christian.jpg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">Alex Christian</h1>
+              <h1 class="function">Ilustrador</h1>
+            </article>
           </div>
-          <div class="card-work">
-            <h1 class="title-work">Newpost</h1>
-            <p class="content-work">
-              Uma rede social feita para quem gosta de ler sobre seus gostos e
-              conhecer novos tópicos.
-            </p>
+          <div class="person">
+            <img src="assets/imgs/Felipe Pavanelli.jpg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">Felipe Pavanelli</h1>
+              <h1 class="function">Analista</h1>
+            </article>
           </div>
-          <div class="card-work">
-            <h1 class="title-work">Lirify</h1>
-            <p class="content-work">
-              Compartilhe e amplie seus gostos musicais por meio dessa
-              plataforma.
-            </p>
+          <div class="person">
+            <img src="assets/imgs/Guilherme Gomes.jpg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">Guilherme Gomes</h1>
+              <h1 class="function">Analista</h1>
+            </article>
+          </div>
+          <div class="person">
+            <img src="assets/imgs/Gustavo Cunha.jpeg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">Gustavo Cunha</h1>
+              <h1 class="function">Desenvolvedor back-end</h1>
+            </article>
+          </div>
+          <div class="person">
+            <img src="assets/imgs/Gustavo Vieira.jpg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">Gustavo Vieira</h1>
+              <h1 class="function">DBA</h1>
+            </article>
+          </div>
+          <div class="person">
+            <img src="assets/imgs/João Victor.jpg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">João Victor</h1>
+              <h1 class="function">Desenvolvedor front-end</h1>
+            </article>
+          </div>
+          <div class="person">
+            <img src="assets/imgs/Lucas Moreira.jpeg" class="avatar" />
+            <article class="person-data">
+              <h1 class="name">Lucas Moreira</h1>
+              <h1 class="function">Analista</h1>
+            </article>
           </div>
         </div>
-      </section>
-      <section id="contact">
-        <div class="section-content">
-          <div class="something-in-mind">
-            <h3 class="section-title">Algo em mente?</h3>
-            <input required name="name" placeholder="Nome">
-            <input required name="email" type="email" placeholder="Email">
-            <input required name="project" placeholder="Detalhes do projeto">
-            <button type="submit">Enviar</button>
-          </div>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="container">
+        <div id="group-form">
+          <h1 class="section-title">Contato</h1>
+          <form>
+            <ul>
+              <li>
+                <label class="label-form">Meu nome é</label>
+                <input
+                  class="input-form"
+                  required
+                  type="text"
+                  placeholder="Seu nome"
+                />
+              </li>
+              <li>
+                <label class="label-form">Meu email é</label>
+                <input
+                  class="input-form"
+                  required
+                  type="email"
+                  placeholder="Seu email"
+                />
+              </li>
+              <li>
+                <label class="label-form">Mensagem</label>
+                <textarea
+                  class="input-form"
+                  required
+                  placeholder="Fale sobre a sua ideia"
+                ></textarea>
+              </li>
+            </ul>
+            <button id="button-form" disabled type="submit">Enviar</button>
+          </form>
+        </div>
+        <div id="aside">
           <div class="contact-data">
-            <h1 class="section-title">Contato</h1>
+            <h1 class="section-title after">Encontre-nos aqui</h1>
             <ul>
-              <li>Dados</li>
-              <li>email@onwork.com</li>
-              <li>(99) 9999-9999</li>
-            </ul>
-            <ul>
-              <li>Siga-nos aqui</li>
-              <li><img src="assets/imgs/facebook.png"/></li>
-              <li><img src="assets/imgs/instagram.png"/></li>
-              <li><img src="assets/imgs/twitter.png"/></li>
-              <li><img src="assets/imgs/dribbble.png"/></li>
+              <li>Email</li>
+              <li>onwork@gmail.com</li>
+              <li>Telefone</li>
+              <li>55 (99) 9999-9999</li>
+              <li>Endereço</li>
+              <li>Etec de Guaianazes, Rua Feliciano Mendonça, 290 - SP</li>
             </ul>
           </div>
         </div>
-      </section>
-    </div>
-    <footer>
-      <span>Icons made by Freepik from <a>www.flaticon.com</a></span>
-      <span>© 2019 Onwork</span>
-      <img class="logo-footer" src="assets/imgs/onwork-white.png"/>
-    </footer>
+      </div>
+    </section>
   </body>
+  <script src="scripts/script.js"></script>
 </html>
