@@ -1,13 +1,22 @@
 var inputs = document.getElementsByClassName("input-form");
 var labels = document.getElementsByClassName("label-form");
 var btn = document.getElementById("button-form");
+var elementDefault = document.querySelector("#landing-header");
+elementDefault.positionY = document.querySelector("#landing").offsetTop;
+var header = document.querySelector("#header");
+var stateMenu = true
+var mobileMode = true
 function init() {
+  if(mobileMode){
+    header.style.top = 0;
+  } 
   window.addEventListener("scroll", () => {
-    verifiesHeader();
+    if(mobileMode == false) verifiesHeader();
     changesHeaderLinks()
   });
-
   labelsForm()
+  addClickMenu("nav-header-mobile")
+  addClickMenu("mobile-link")
 }
 
 function changesHeaderLinks () {
@@ -23,21 +32,11 @@ function changesHeaderLinks () {
       }
     }
   }
-  
-  for(i = 0; i < sections.length; i++){
-    // if(window.scrollY > sections[0].positionY) console.log("olá")
-    // if(window.scrollY > sections[1].positionY) console.log("td bem")
-    // if(window.scrollY > sections[2].positionY) console.log("tchau")
-    // if(window.scrollY > sections[3].positionY) console.log(sections[0].positionY)
-  }
 }
 
 function verifiesHeader() {
-  elementDefault = document.querySelector("#landing-header");
-  elementDefault.positionY = document.querySelector("#landing").offsetTop;
-  header = document.querySelector("#header");
-  if (window.scrollY > elementDefault.positionY) header.style.top = 0;
-  if (window.scrollY < elementDefault.positionY) header.style.top = "-100%";
+    if (window.scrollY > elementDefault.positionY) header.style.top = 0;
+    if (window.scrollY < elementDefault.positionY) header.style.top = "-100%";
 }
 
 function labelsForm(){
@@ -62,4 +61,41 @@ function checksForm() {
   }
   if (c) btn.disabled = false;
   if (!c) btn.disabled = true;
+}
+
+function addClickMenu(e){
+  e = document.getElementsByClassName(e)
+  for(i=0;i<e.length;i++){
+    e[i].addEventListener("click", ()=>{
+      changeMenu(stateMenu)
+    })
+  }
+}
+
+function addClickLink(e){
+  e = doccumnet.getElementsByClassName(e)
+  for(i=0;i<e.length;i++){
+    e[i],addEventListener("click", ()=>{
+      // changeMenu(stateMenu)
+      alert(1)
+    })
+  }
+}
+
+function changeMenu(state){
+  menu = document.getElementsByClassName("overlay-menu")[0]
+  if(state){
+    // alert("abreMenu")
+    menu.style.right = 0
+    menu.style.opacity = 1
+    stateMenu = false
+  }else{
+    // alert("fecha menu")
+    // menu.style.right = "-100%"
+    menu.style.opacity = 0
+    setTimeout(()=>{
+      menu.style.right = "-100%"
+    }, 300)
+    stateMenu = true
+  }
 }
