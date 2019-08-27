@@ -37,8 +37,9 @@ $title-color: #103f4e;
 $subtitle-color: rgb(77, 108, 117);
 $text-color: #2b2a2a;
 $lightColor: #f1fbff;
+$lightGray: #fafafa;
 $lightBlue: #cfeffc;
-$darkBlue: #003849;
+$darkBlue: #002c3a;
 /* */
 /* STRUCTURE VARS */
 
@@ -428,7 +429,7 @@ section#about-us {
 section#works {
   display: flex;
   justify-content: center;
-  background: $lightColor;
+  background: $lightGray;
 
   .section-title,
   .section-subtitle {
@@ -449,57 +450,19 @@ section#works {
       margin-top: $margin4;
 
       .project {
-        width: 400px;
+        width: 500px;
         margin: $margin4 $margin2 $margin4 $margin2;
         position: relative;
         transform-style: preserve-3d;
 
         .project-image {
-          height: 500px;
           width: 100%;
-          position: relative;
-          background: rgb(176, 243, 255);
-
-          &:before {
-            @extend %layBefore;
-            background: black;
-            border: none;
-            margin: $margin2 * -1 0 0 $margin2 * -1;
-          }
-
-          &:hover:before {
-            @extend %layBeforeHover;
-            margin: 0;
-            border: 0;
-          }
+          object-fit: cover;
         }
 
         .project-title {
           font-size: 2em;
           margin: $margin2 0 0 0;
-        }
-
-        &:nth-child(even) {
-          margin-top: $margin4 * 2;
-
-          .project-image {
-            &:before {
-              margin-left: $margin2;
-            }
-
-            &:hover:before {
-              margin: 0;
-            }
-          }
-        }
-      }
-
-      .wide {
-        width: 400px;
-
-        .project-image {
-          height: 300px;
-          width: 100%;
         }
       }
     }
@@ -669,7 +632,7 @@ section#contact {
       // $lightText: black;
       width: 100%;
       background: $darkBlue;
-      // background: $lightBlue;
+      // background: #f7f7f7;
       color: $lightText;
       transform-style: preserve-3d;
       padding: 15px 20px 50px 20px;
