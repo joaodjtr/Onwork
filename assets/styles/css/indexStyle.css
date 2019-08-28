@@ -611,6 +611,17 @@ footer .container img {
     margin: 40px 0;
   }
 }
+/* works */
+@media (max-width: 1450px) {
+  #works .project {
+    width: 375px !important;
+  }
+}
+@media (min-width: 600px) {
+  #works .project {
+    width: 150px;
+  }
+}
 /* team */
 @media (min-width: 1200px) {
   div#content .person {
