@@ -321,9 +321,8 @@ nav#landing-header {
 }
 
 section#landing {
-  height: 75vh;
-  width: 100%;
-  box-sizing: border-box !important;
+  height: auto;
+  padding-bottom: $margin4 * 2 !important;
   position: relative;
   display: flex;
   justify-content: center;
@@ -335,7 +334,7 @@ section#landing {
 
   #landing-group {
     position: relative;
-    width: 100%;
+    // width: 100%;
     #main-text {
       width: auto;
     }
@@ -361,19 +360,20 @@ section#landing {
   }
 
   img#landing-hero {
-    height: 100%;
+    width: 50vmax;
+    object-fit: cover;
   }
 }
 
 section#about-us{
-  height: 100%;
-  width: 100%;
+  width: 100vmax;
   display: flex;
   justify-content: center;
   .container{
     display: flex;
     flex-flow: row wrap;
-    figure.aside{
+    align-items: center;
+    figure.about-us-image{
       width: 50%;
       margin: 0;
       padding: 0;
@@ -505,7 +505,6 @@ section#contact {
   display: flex;
   justify-content: center;
   margin: $margin4 * 2 0 0 0;
-
   .container {
     display: flex;
     justify-content: space-between;
@@ -681,44 +680,47 @@ footer {
 
 /* LANDING SECTION */
 @media (max-width: 980px) {
-  #landing-group {
-    width: 100%;
-  }
-  #main-text {
-    width: 100%;
-  }
-  img#landing-hero {
-    display: none;
-    width: 0;
-  }
-}
-
-/* about us */
-@media (max-width: 840px){
-  section#about-us {
-    align-items: center;
-    
-    .block {
-      width: 100% !important;
-      margin: $margin2 0;
-      padding: 0;
-      .box-content {
-        width: 100%;
-        margin: 0 !important;
+  #landing{
+    .container{
+      display: grid;
+      flex-flow: column nowrap;
+      align-items: center;
+      #landing-group{
+        margin: 0;
+        order: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        #main-text{
+          text-align: center;
+        }
       }
-      &:first-child img {
-        display: none;
+      img#landing-hero{
+        order: 1;
+        height: 50vh;
+        width: 80vmax;
+        object-fit: cover;
+        margin-bottom: $margin2;
       }
     }
   }
 }
 
-@media (max-width: 1135px) {
+/* about us */
+@media (max-width: 980px){
   section#about-us {
-    .block {
-      margin: $margin2 0;
-      &:first-child img {
-        margin: $margin4 0;
+    justify-content: center;
+    // background: red;
+    .container{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      figure.about-us-image{
+        width: 80%;
+        margin-bottom: $margin2;
+      }
+      .content{
+        width: 100%;
       }
     }
   }

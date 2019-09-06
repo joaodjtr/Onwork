@@ -263,9 +263,8 @@ header {
 }
 
 section#landing {
-  height: 75vh;
-  width: 100%;
-  box-sizing: border-box !important;
+  height: auto;
+  padding-bottom: 80px !important;
   position: relative;
   display: flex;
   justify-content: center;
@@ -277,7 +276,6 @@ section#landing .container {
 }
 section#landing #landing-group {
   position: relative;
-  width: 100%;
 }
 section#landing #landing-group #main-text {
   width: auto;
@@ -291,25 +289,26 @@ section#landing #landing-group button#about:hover:before {
   border: 1px solid black;
 }
 section#landing img#landing-hero {
-  height: 100%;
+  width: 50vmax;
+  object-fit: cover;
 }
 
 section#about-us {
-  height: 100%;
-  width: 100%;
+  width: 100vmax;
   display: flex;
   justify-content: center;
 }
 section#about-us .container {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
 }
-section#about-us .container figure.aside {
+section#about-us .container figure.about-us-image {
   width: 50%;
   margin: 0;
   padding: 0;
 }
-section#about-us .container figure.aside img {
+section#about-us .container figure.about-us-image img {
   width: 100%;
   object-fit: cover;
 }
@@ -557,43 +556,45 @@ footer .container img {
 }
 /* LANDING SECTION */
 @media (max-width: 980px) {
-  #landing-group {
-    width: 100%;
+  #landing .container {
+    display: grid;
+    flex-flow: column nowrap;
+    align-items: center;
   }
-
-  #main-text {
-    width: 100%;
+  #landing .container #landing-group {
+    margin: 0;
+    order: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
   }
-
-  img#landing-hero {
-    display: none;
-    width: 0;
+  #landing .container #landing-group #main-text {
+    text-align: center;
+  }
+  #landing .container img#landing-hero {
+    order: 1;
+    height: 50vh;
+    width: 80vmax;
+    object-fit: cover;
+    margin-bottom: 20px;
   }
 }
 /* about us */
-@media (max-width: 840px) {
+@media (max-width: 980px) {
   section#about-us {
+    justify-content: center;
+  }
+  section#about-us .container {
+    display: flex;
+    flex-flow: column nowrap;
     align-items: center;
   }
-  section#about-us .block {
-    width: 100% !important;
-    margin: 20px 0;
-    padding: 0;
+  section#about-us .container figure.about-us-image {
+    width: 80%;
+    margin-bottom: 20px;
   }
-  section#about-us .block .box-content {
+  section#about-us .container .content {
     width: 100%;
-    margin: 0 !important;
-  }
-  section#about-us .block:first-child img {
-    display: none;
-  }
-}
-@media (max-width: 1135px) {
-  section#about-us .block {
-    margin: 20px 0;
-  }
-  section#about-us .block:first-child img {
-    margin: 40px 0;
   }
 }
 /* works */
