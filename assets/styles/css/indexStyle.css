@@ -54,13 +54,12 @@ body h6 {
 /* CLASSES */
 nav#landing-header, header {
   width: 100%;
-  padding: 48px 10% 48px 10%;
-  padding-bottom: 0;
+  padding: 0 10% 20px 10%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 998;
+  z-index: 999;
   transition: 0.5s;
 }
 nav#landing-header #logo img, header #logo img {
@@ -213,8 +212,7 @@ section#contact .container #group-form form button:hover:before, section#landing
 }
 
 section {
-  min-height: 100%;
-  min-width: 100%;
+  width: 99vmax;
   padding: 40px 0 40px 0;
   position: relative;
   display: block;
@@ -259,26 +257,30 @@ p.text {
 header {
   position: fixed;
   background: rgba(255, 255, 255, 0.98);
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 20px;
   top: -100%;
   box-shadow: 0 0 10px -2.5px #c2c2c2;
 }
 
 section#landing {
+  height: 75vh;
+  width: 100%;
+  box-sizing: border-box !important;
+  position: relative;
   display: flex;
   justify-content: center;
 }
 section#landing .container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 section#landing #landing-group {
   position: relative;
-  height: 100%;
   width: 100%;
 }
 section#landing #landing-group #main-text {
-  max-width: 600px;
+  width: auto;
 }
 section#landing #landing-group button#about:hover {
   transition: 0.25s;
@@ -289,58 +291,41 @@ section#landing #landing-group button#about:hover:before {
   border: 1px solid black;
 }
 section#landing img#landing-hero {
-  width: 50%;
+  height: 100%;
 }
 
 section#about-us {
-  display: flex;
-  justify-content: center;
-}
-section#about-us .box-content .text {
-  max-width: 450px;
-  text-align: left;
-}
-section#about-us .block {
-  margin-top: 40px;
-}
-section#about-us .block:first-child {
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 0;
-}
-section#about-us .block:first-child img {
-  max-height: 300px;
-  margin: 0 0 0 -30px;
-}
-section#about-us .block:nth-child(2) {
-  justify-content: center;
-}
-section#about-us .block:nth-child(2) .box-content {
-  margin-left: 25%;
-}
-section#about-us .block:nth-child(2) .box-content .text {
+  height: 100%;
   width: 100%;
-}
-section#about-us .block:last-child {
+  display: flex;
   justify-content: center;
 }
-section#about-us .block:last-child ul {
+section#about-us .container {
   display: flex;
-  list-style: none;
+  flex-flow: row wrap;
+}
+section#about-us .container figure.aside {
+  width: 50%;
   margin: 0;
   padding: 0;
 }
-section#about-us .block:last-child ul li {
-  padding: 24px 15px 24px 15px;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-align: center;
-  border: 2px solid black;
+section#about-us .container figure.aside img {
+  width: 100%;
+  object-fit: cover;
 }
-section#about-us .block:last-child ul li:nth-child(2) {
-  border-left: 1px;
-  border-right: 1px;
+section#about-us .container .content {
+  width: 50%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+section#about-us .container .content .section-title {
+  text-align: center;
+  display: block;
+}
+section#about-us .container .content .section-subtitle {
+  margin: 40px 0 0 0;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 section#works {
@@ -591,7 +576,7 @@ footer .container img {
     align-items: center;
   }
   section#about-us .block {
-    width: 100%;
+    width: 100% !important;
     margin: 20px 0;
     padding: 0;
   }
