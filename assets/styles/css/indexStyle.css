@@ -544,6 +544,23 @@ footer .container img {
 }
 
 /* Responsiviness */
+@media (max-width: 840px) {
+  .section-title {
+    font-size: 3.75rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 2.75rem !important;
+  }
+
+  .text, .name, section#landing #landing-group button#about, section#contact .container #group-form form button {
+    font-size: 1.8rem !important;
+  }
+
+  .function {
+    font-size: 1.5rem !important;
+  }
+}
 /* Menu */
 @media (max-width: 840px) {
   .nav-header {
@@ -556,6 +573,9 @@ footer .container img {
 }
 /* LANDING SECTION */
 @media (max-width: 980px) {
+  #landing {
+    height: 100vh !important;
+  }
   #landing .container {
     display: grid;
     flex-flow: column nowrap;
