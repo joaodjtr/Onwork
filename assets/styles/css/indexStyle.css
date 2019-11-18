@@ -54,7 +54,7 @@ body h6 {
 /* CLASSES */
 nav#landing-header, header {
   width: 100%;
-  padding: 0 10% 20px 10%;
+  padding: 10px 10% 10px 10%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -81,7 +81,6 @@ nav#landing-header .nav-header ul a:visited, header .nav-header ul a:visited {
 nav#landing-header .nav-header ul li, header .nav-header ul li {
   margin: 0 0 0 10px;
   padding: 6px 4px 6px 4px;
-  text-transform: lowercase;
   font-size: 1.1em;
   font-weight: 600;
   color: black;
@@ -257,9 +256,9 @@ p.text {
 header {
   position: fixed;
   background: rgba(255, 255, 255, 0.98);
-  padding-top: 20px;
+  padding-top: 10px;
   top: -100%;
-  box-shadow: 0 0 10px -2.5px #c2c2c2;
+  border-bottom: 1px solid #eeeeee;
 }
 
 section#landing {
@@ -343,15 +342,16 @@ section#works .container {
   justify-content: center;
 }
 section#works .container #projects {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  grid-gap: 80px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1200px;
-  margin-top: 40px;
 }
 section#works .container #projects .project {
-  width: 500px;
-  margin: 40px 20px 40px 20px;
+  width: 100%;
+  margin: 20px 0 0 0;
   position: relative;
   transform-style: preserve-3d;
 }
@@ -360,8 +360,12 @@ section#works .container #projects .project .project-image {
   object-fit: cover;
 }
 section#works .container #projects .project .project-title {
-  font-size: 2em;
-  margin: 20px 0 0 0;
+  font-size: 1.5em;
+  margin: 10px 0 0 0;
+}
+section#works .container #projects .project .text {
+  font-size: 1.2em;
+  margin: 10px 0 0 0;
 }
 
 section#team {
@@ -419,7 +423,6 @@ section#team div#content .person .person-data .function {
 section#contact {
   display: flex;
   justify-content: center;
-  margin: 80px 0 0 0;
 }
 section#contact .container {
   display: flex;
@@ -456,7 +459,7 @@ section#contact .container #group-form form ul li:last-child {
   width: 840px;
 }
 section#contact .container #group-form form ul li label {
-  font-size: 1.38em;
+  font-size: 1.4em;
   font-weight: bold;
   font-family: title;
   display: block;

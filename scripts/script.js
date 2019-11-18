@@ -72,26 +72,13 @@ function addClickMenu(e){
   }
 }
 
-function addClickLink(e){
-  e = doccumnet.getElementsByClassName(e)
-  for(i=0;i<e.length;i++){
-    e[i],addEventListener("click", ()=>{
-      // changeMenu(stateMenu)
-      alert(1)
-    })
-  }
-}
-
 function changeMenu(state){
   menu = document.getElementsByClassName("overlay-menu")[0]
   if(state){
-    // alert("abreMenu")
     menu.style.right = 0
     menu.style.opacity = 1
     stateMenu = false
   }else{
-    // alert("fecha menu")
-    // menu.style.right = "-100%"
     menu.style.opacity = 0
     setTimeout(()=>{
       menu.style.right = "-100%"
